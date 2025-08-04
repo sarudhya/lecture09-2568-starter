@@ -11,5 +11,4 @@ Additional source code for lecture
 
 https://gist.github.com/tuinuichanadda/d96d6d59c860d7612ed3b536a3822bb3
 
-# Lecture09 done
-https://github.com/tuinuichanadda/lecture09-2568-done.git
+
