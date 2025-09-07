@@ -1,10 +1,22 @@
 import { type TaskCardProps } from "../libs/Todolist";
+interface Props{
+  id: string;
+  title: string;
+  description: string;
+  isDone: boolean;
+  btDones:(id: string) => void;
+}
+
 export default function TaskCard({
   id,
   title,
   description,
   isDone,
-}: TaskCardProps) {
+  btDones,
+}: Props) {
+  const btDone = () => {
+    btDones(id);
+  };
   return (
     <div key={id} className="card mb-3">
       <div className="card-body">
@@ -24,7 +36,7 @@ export default function TaskCard({
             <p className="card-text">{description}</p>
           </div>
           <div className="col-xs-3 col-sm-3 col-md-3 col-lg-2">
-            <button className="btn btn-success me-2">Done</button>
+            <button className="btn btn-success me-2" onClick={btDone}>Done</button>
           </div>
           <div className="col-xs-3 col-sm-3 col-md-3 col-lg-2">
             <button className="btn btn-danger">Delete</button>
